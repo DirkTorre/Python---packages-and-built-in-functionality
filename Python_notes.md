@@ -1,0 +1,1 @@
+/media/user/data1/Code/notes/Python_notes.md
