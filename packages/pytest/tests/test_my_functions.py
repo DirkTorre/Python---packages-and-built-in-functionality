@@ -34,7 +34,7 @@ def test_divide():
 
 def test_divide_by_zero():
     """
-    Test if the fucntion gives a error if it divides by 0.
+    Test if the function gives a error if it divides by 0.
     This is good, because dividing by zero causes the universe to explode.
     """
 

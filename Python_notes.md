@@ -3,10 +3,10 @@ You can quick search for subjets by ctrl-f on the following hashtags:
 
 \#algorithms \#bins \#chaining \#collapse \#combinations \#constants \#debugging \#difference \#filtering \#intersection \#listcomprehension \#lists \#logging \#loops \#mapping \#pandas \#permutations \#plotting \#printing \#reducing \#reformatting \#removing \#sets \#sorting \#star \#strings \#structure \#subset \#symmetric_difference \#transpose \#union \#unpacking
 
-Code to generate this list:
+Bash code to generate this list:
 
 ```bash
-cat Python.md | tr ' ' '\n' | egrep '\\#' | sort | uniq | tr '\n' ' '
+cat Python_notes.md | tr ' ' '\n' | egrep '\\#' | sort | uniq | tr '\n' ' '
 ```
 
 This document is made by [Dirk van der Torre](https://github.com/DirkTorre).
@@ -29,8 +29,12 @@ PS: I am dyslexic. There will be spelling mistakes and worse: the Dutch language
 # The structure of a Python project
 \#structure
 
-The code sctructure should be like below.
+Once a project gets bigger, you will get in trouble because of redundancies and file sizes.
+So the idea is create the right framework from the start to resolve this.
+There is a handy document about project structure [on this website](https://docs.python-guide.org/writing/structure/)
+I took it as inspiration and added some things to create a code that also fits data analysis.
 Don't name files as if they are classes.
+
 question: do the core_functions and helper_functions also need to have an ```__init__.py```??
 
 ```
@@ -388,6 +392,51 @@ def transpose(matrix):
         matrix2.append(new_row)
     return matrix2
 ```
+
+***
+
+# Environments
+## Conda
+\#conda \#environment
+
+More info [here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment).
+
+Deactivating environment:
+
+```bash
+conda deactivate
+```
+
+Show environments:
+
+```bash
+conda info --envs
+```
+
+Activate environment:
+
+```bash
+conda activate name_of_env
+```
+
+# Testing
+## Pytest
+
+Make sure to name every test function test_<name of function to test>.
+
+### Collect all tests(?):
+\#testing \#command
+
+```bash
+pytest -s
+```
+
+Viewing classes in your tests:
+
+```bash
+pytest test_circle.py -s
+```
+
 
 ***
 

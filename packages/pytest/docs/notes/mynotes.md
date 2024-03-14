@@ -1,6 +1,6 @@
 # Videos
 
-- Handy [tutorial on pytest](https://www.youtube.com/watch?v=cHYq1MRoyI0) that is cool. Continue on 'Class-based Tests'.
+- Handy [tutorial on pytest](https://www.youtube.com/watch?v=cHYq1MRoyI0) that is cool. Continue on 'Mark and paremiterize'.
 
 # Websites
 
