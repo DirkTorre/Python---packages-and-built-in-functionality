@@ -16,12 +16,12 @@ This document belongs to this [GitHub repo](https://github.com/DirkTorre/Python-
 ***
 
 # Index (kinda)
-1. [Data Types](#Data-types)
 1. [The structure of a Python project](#The-structure-of-a-Python-project)
-2. [Pandas](#Pandas)
-3. [Plain Python](#Plain-Python)
-4. [Algorithms](#Algorithms)
-5. [Other interesting libraries](#Other-interesting-libraries)
+2. [Data Types](#Data-types)
+3. [Pandas](#Pandas)
+4. [Plain Python](#Plain-Python)
+5. [Algorithms](#Algorithms)
+6. [Other interesting libraries](#Other-interesting-libraries)
 
 PS: I am dyslexic. There will be spelling mistakes and worse: the Dutch language.
 
