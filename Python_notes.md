@@ -16,6 +16,7 @@ This document belongs to this [GitHub repo](https://github.com/DirkTorre/Python-
 ***
 
 # Index (kinda)
+1. [Data Types](#Data-types)
 1. [The structure of a Python project](#The-structure-of-a-Python-project)
 2. [Pandas](#Pandas)
 3. [Plain Python](#Plain-Python)
@@ -35,7 +36,8 @@ There is a handy document about project structure [on this website](https://docs
 I took it as inspiration and added some things to create a code that also fits data analysis.
 Don't name files as if they are classes.
 
-question: do the core_functions and helper_functions also need to have an ```__init__.py```??
+
+Only the most upper directory of an module needs an ```__init__.py```.
 
 ```
 project
@@ -84,6 +86,20 @@ project
 |-------------------requirements.txt
 \----------------starter_function.py
 ```
+
+***
+
+# Data types
+## [The typing package](https://docs.python.org/3/library/typing.html)
+
+Allows you to define (multiple) variable types and set constants!
+
+```python
+from typing import Final
+a: Final[int] = 1
+```
+
+***
 
 # Pandas
 
@@ -436,6 +452,20 @@ Viewing classes in your tests:
 ```bash
 pytest test_circle.py -s
 ```
+
+***
+
+# Jupyter Notebooks
+
+## Let execution of notebook continue after an error
+```%%capture output```
+
+## Tags
+- nbconvert: hide a cell, hide the input leaving the output visible, collapse a cell leaving a way to reveal it
+- nbconvert to latex:  markdown cell contains title (or subtitle, abstract...)
+- nbval: check/ignore output from a cell, skip executing a cell, expect a cell to raise an error
+- nbgrader: solution cell, tests cell
+- nbparameterise: cell contains input parameters.
 
 
 ***
