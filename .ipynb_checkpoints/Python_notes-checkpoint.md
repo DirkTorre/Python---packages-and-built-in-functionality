@@ -1,3 +1,6 @@
+continue at:
+**Continue here**
+
 # Handy Python code snippets and info
 You can quick search for subjets by ctrl-f on the following hashtags:
 
@@ -46,7 +49,7 @@ project
 |  |  \-------------raw_download.txt
 |  |
 |  |--intermediate
-|  |  \------------wrangled_data.txt
+|  |  \--------wrangled_data.feather
 |  |
 |  |--clean
 |  |  \---ready_for_analysis.parquet
@@ -102,6 +105,13 @@ a: Final[int] = 1
 ***
 
 # Pandas
+
+## Restructuring the data
+Pandas has a lot of (new) functions to wrangle the data into the right format.
+Here I will make an overview of what is possible out of the box to safe myself a headache.
+
+**Continue here**
+
 
 ## Drop columns
 \#pandas \#removing
@@ -189,6 +199,14 @@ pd.pivot_table(personell, values='info', index=['tconst'], columns=['category'],
 ***
 
 # Plain Python
+
+## define function without implementing it yet.
+
+```python
+def EternalSunshineOfTheSpotlessMind():
+    NotImplemented
+```
+
 ## make list using list comprehension with an condition
 \#listcomprehension
 
@@ -391,6 +409,19 @@ Converts string to list of strings
 textwrap.fill(string, max_width)
 ```
 
+## args and kwargs
+\#arguments
+
+https://realpython.com/python-kwargs-and-args/
+
+This is great.
+
+turns arguments in a function into a list or dictionary
+
+```python
+
+```
+
 ***
 
 # Algorithms
@@ -470,6 +501,8 @@ pytest test_circle.py -s
 
 ***
 
+
+
 # Other interesting libraries
     Polars: a faster pandas (4x) uses lazy loading
     tqdm: progres bar for raw code and notebook
@@ -477,3 +510,41 @@ pytest test_circle.py -s
         - from tqdm.notebook import tqdm
         for thing in tqdm(whatever):
     - spark: voor pipelines, kan script processen/data verdelen over meerdere nodes/computers
+
+
+# classes
+
+## raise NotImplementedError
+
+you can use this when you want to create a abscract method that must be written when inherrited.
+
+```python
+class RectangularRoom(object):
+    def __init__(self, width, height):
+        raise NotImplementedError
+```
+
+## private methods
+
+```python
+class Dummie:
+    def __init__(self):
+        self.__const = 6 # private var
+    
+    def get_answer(self):
+        """ A pubic method """
+        x = self.__add(1, 2)
+        return self._subtract(x, self.__const)
+        
+    def __add(x, y):
+        """ A private method with name mangling """
+        return x + y
+    
+    def _subtract(x, y):
+        """ A private method without name mangling """
+        return x + y
+        
+        
+```
+
+

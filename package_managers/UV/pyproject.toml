@@ -1,0 +1,33 @@
+[project]
+name = "uv"
+version = "0.1.0"
+description = "testing out uv"
+readme = "README.md"
+authors = [
+    { name = "DirkTorre", email = "dirkvdtorre@live.nl" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.2.0",
+    "pandas>=2.2.3",
+    "python-fasthtml>=0.12.1",
+]
+
+[project.scripts]
+uv = "uv:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "mypy>=1.15.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.6",
+]
+testgroup = [
+    "polars>=1.22.0",
+]
